@@ -46,11 +46,11 @@ public class MainTest {
         assertEquals(0.00000,divideBy0,0);
     }
 
-/*    @Test
+    @Test
     public void testToFail() {
         Calc f = new Calc();
         int w = f.add(5,5);
         assertEquals(3,w);
-    }*/
+    }
 
 }
