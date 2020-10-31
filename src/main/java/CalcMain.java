@@ -13,8 +13,13 @@ public class CalcMain {
         Calc calc = new Calc();
 
         int sum = calc.add(a,b);
+        int subt = calc.subtract(a,b);
+        long multi = calc.multiply(a,b);
+        double div = calc.divide(a,b);
 
-        System.out.println(sum);
-
+        System.out.println("Suma to: "+ sum);
+        System.out.println("Różnica to: "+ subt);
+        System.out.println("Wymik mnożenia to: "+ multi);
+        System.out.println("Wynik dzielenia to: "+ div);
     }
 }
