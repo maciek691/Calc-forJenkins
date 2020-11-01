@@ -2,9 +2,7 @@ import java.util.Scanner;
 
 public class Calc {
 
-    public int add (int numb1, int numb2){
-        return numb1 + numb2;
-    }
+    public int add (int numb1, int numb2){return numb1 + numb2; }
 
     public int subtract (int numb1, int numb2) {
         return numb1 - numb2;
