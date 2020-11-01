@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Calc {
 
     public int add (int numb1, int numb2){
@@ -13,12 +15,13 @@ public class Calc {
     }
 
     public double divide (int numb1, int numb2) {
-        String nie = "nie dziel przez 0";
-        if (numb2 ==0) {
-            System.out.println("nie dziel przez 0");
-            return 0.00000;
+        if (numb2 == 0) {
+            while (numb2 == 0) {
+                Scanner scn = new Scanner(System.in);
+                System.out.println("Cant divide by 0. Set new second number");
+                numb2 = scn.nextInt();
+            }
         }
-        return (double) numb1 / numb2;
-
+        return (double) numb1/numb2;
     }
 }
