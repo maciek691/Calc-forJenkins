@@ -22,12 +22,12 @@ public class CalcControl {
         int a = numbers[0];
         int b = numbers[1];
 
-        Option option;
+        OptionMenu optionMenu;
         do {
             printOptions();
-            option = Option.createFromInt(getInt());
+            optionMenu = OptionMenu.createFromInt(getInt());
 
-            switch (option) {
+            switch (optionMenu) {
                 case ADD:
                     System.out.println(calcMain.add(a,b));
                     break;
@@ -47,14 +47,14 @@ public class CalcControl {
                     System.out.println("Nie ma takiej opcji");
             }
 
-        } while(option !=Option.EXIT);
+        } while(optionMenu != OptionMenu.EXIT);
 
     }
 
     private void printOptions() {
         System.out.println("Wybierz co chcesz zrobić: ");
-        for(Option option : Option.values()){
-            System.out.println(option);
+        for(OptionMenu optionMenu : OptionMenu.values()){
+            System.out.println(optionMenu);
         }
     }
 
