@@ -8,7 +8,8 @@ public class CalcMain {
         int a = scn.nextInt();
         int b = scn.nextInt();
 
-        int numbers[] = {a,b};
+        int[] numbers;
+        numbers = new int[]{a,b};
         return numbers;
     }
 
