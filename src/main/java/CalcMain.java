@@ -26,7 +26,7 @@ public class CalcMain {
         if (numb2 == 0) {
             while (numb2 == 0) {
                 Scanner scn = new Scanner(System.in);
-                System.out.println("Cant divide by 0. Set new second number");
+                System.out.println("Nie można dzielić przez 0. Wybierz nową drugą liczbę");
                 numb2 = scn.nextInt();
             }
         }

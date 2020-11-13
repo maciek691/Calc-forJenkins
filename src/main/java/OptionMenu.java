@@ -25,4 +25,9 @@ public enum OptionMenu {
     static OptionMenu createFromInt(int option) {
         return OptionMenu.values()[option];
     }
+
+    @Override
+    public String toString() {
+        return value + " " + function;
+    }
 }
