@@ -8,14 +8,14 @@ public class MainTest {
 
     @Test
     public void addTest() {
-        Calc calc = new Calc();
-        int add = calc.add(5, 5);
+        CalcMain calcMain = new CalcMain();
+        int add = calcMain.add(5, 5);
         assertEquals(10, add);
     }
 
     @Test
     public void subtractTest() {
-        Calc s = new Calc();
+        CalcMain s = new CalcMain();
 
         int subtract = s.subtract(10, 5);
 
@@ -24,7 +24,7 @@ public class MainTest {
 
     @Test
     public void multiplyTest() {
-        Calc m = new Calc();
+        CalcMain m = new CalcMain();
 
         long multiply = m.multiply(5, 5);
 
@@ -33,14 +33,14 @@ public class MainTest {
 
     @Test
     public void divideTest() {
-        Calc d = new Calc();
+        CalcMain d = new CalcMain();
         double divide = d.divide(10, 4);
         assertEquals(2.5, divide, 0);
     }
 
 /*    @Test
     public void divide0Test() {
-        Calc d = new Calc();
+        CalcMain d = new CalcMain();
         double divideBy0 = d.divide(5, 0);
         assertEquals(2, divideBy0, 0);
     }*/

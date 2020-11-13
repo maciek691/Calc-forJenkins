@@ -1,26 +1,35 @@
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class CalcMain {
 
-    public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
 
-        Scanner scn = new Scanner(System.in);
-
+    public int[] setNumbers () {
         int a = scn.nextInt();
         int b = scn.nextInt();
 
-        Calc calc = new Calc();
+        int numbers[] = {a,b};
+        return numbers;
+    }
 
-        int sum = calc.add(a, b);
-        int subtr = calc.subtract(a, b);
-        long multi = calc.multiply(a, b);
-        double div = calc.divide(a,b);
+    public int add (int numb1, int numb2){ return numb1 + numb2; }
 
-        System.out.println("Suma to: " + sum);
-        System.out.println("Różnica to: " + subtr);
-        System.out.println("Wymik mnożenia to: " + multi);
-        System.out.println("Wymik mdzielenia to: " + div);
+    public int subtract (int numb1, int numb2) {
+        return numb1 - numb2;
+    }
 
+    public long multiply (int numb1, int numb2) {
+        return (long) numb1 * numb2;
+    }
+
+    public double divide (int numb1, int numb2) {
+        if (numb2 == 0) {
+            while (numb2 == 0) {
+                Scanner scn = new Scanner(System.in);
+                System.out.println("Cant divide by 0. Set new second number");
+                numb2 = scn.nextInt();
+            }
+        }
+        return (double) numb1/numb2;
     }
 }
