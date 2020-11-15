@@ -5,7 +5,9 @@ public enum OptionMenu {
     ADD(1, "sumowanie liczb"),
     SUBTRACT(2, "odejmowanie liczb"),
     MULTIPLY(3, "mnożenie liczb"),
-    DIVIDE(4, "dzielienie liczb");
+    DIVIDE(4, "dzielienie liczb"),
+    POWER(5, "podnieś pierwszą liczbę do potęgi drugiej liczby"),
+    ROOT(6, "pierwiastek z pierwszej liczby stopnia drugiej liczby");
 
     private int value;
     private String function;

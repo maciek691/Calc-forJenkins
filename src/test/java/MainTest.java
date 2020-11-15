@@ -45,4 +45,17 @@ public class MainTest {
         assertEquals(2, divideBy0, 0);
     }*/
 
+    @Test
+    public void powerTest() {
+        CalcMain p = new CalcMain();
+        double power = p.power(3,4);
+        assertEquals(81,power,0);
+    }
+
+    @Test
+    public void rootTest() {
+        CalcMain r = new CalcMain();
+        double root = r.root(16,4);
+        assertEquals(2,root,0);
+    }
 }

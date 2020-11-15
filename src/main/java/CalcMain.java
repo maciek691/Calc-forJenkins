@@ -33,4 +33,12 @@ public class CalcMain {
         }
         return (double) numb1/numb2;
     }
+
+    public double power (int numb1, int numb2) {
+        return Math.pow(numb1, numb2);
+    }
+
+    public double root (int numb1, double numb2) {
+        return Math.pow(numb1,1/numb2);
+    }
 }

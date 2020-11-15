@@ -40,6 +40,12 @@ public class CalcControl {
                 case DIVIDE:
                     System.out.println(calcMain.divide(a,b));
                     break;
+                case POWER:
+                    System.out.println(calcMain.power(a,b));
+                    break;
+                case ROOT:
+                    System.out.println(calcMain.root(a,b));
+                    break;
                 case EXIT:
                     exit();
                     break;
