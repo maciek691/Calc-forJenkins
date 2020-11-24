@@ -1,6 +1,6 @@
-1. metoda do obliczania potęgi + test
-2. metoda do obliczania pierwiastków + test
-3. metoda czy daną liczbę da sie uzyskać przez podniesienie 2 do potęgi n + test
-4. test metody divide gdy dzielimy przez 0.
-5. Rozwinąć możliwość wprowadzania większej ilości liczb.
-6. podaj nowe liczby w menu
+metoda czy daną liczbę da sie uzyskać przez podniesienie 2 do potęgi n + test
+test metody divide gdy dzielimy przez 0.
+Rozwinąć możliwość wprowadzania większej ilości liczb.
+dodac metode do drukowania samiast sout.
+zrobić porządek w klasach i porozdzielać je na package
+

@@ -2,10 +2,12 @@ import java.util.Scanner;
 
 public class CalcMain {
 
-    Scanner scn = new Scanner(System.in);
+    public static Scanner scn = new Scanner(System.in);
 
     public int[] setNumbers () {
+        System.out.println("podaj pierwszą liczbę");
         int a = scn.nextInt();
+        System.out.println("podaj drugą liczbę");
         int b = scn.nextInt();
 
         int[] numbers;
@@ -24,14 +26,10 @@ public class CalcMain {
     }
 
     public double divide (int numb1, int numb2) {
-        if (numb2 == 0) {
-            while (numb2 == 0) {
-                Scanner scn = new Scanner(System.in);
-                System.out.println("Nie można dzielić przez 0. Wybierz nową drugą liczbę");
-                numb2 = scn.nextInt();
-            }
+        if(numb2==0){
+            throw new ArithmeticException("Nie można dzielić przez 0. Wybierz 1 i ustaw nowe wartości liczb.");
         }
-        return (double) numb1/numb2;
+        return (double) numb1 / numb2;
     }
 
     public double power (int numb1, int numb2) {

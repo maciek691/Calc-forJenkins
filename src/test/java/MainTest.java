@@ -3,6 +3,7 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class MainTest {
 
@@ -38,12 +39,13 @@ public class MainTest {
         assertEquals(2.5, divide, 0);
     }
 
-/*    @Test
-    public void divide0Test() {
-        CalcMain d = new CalcMain();
-        double divideBy0 = d.divide(5, 0);
-        assertEquals(2, divideBy0, 0);
-    }*/
+//    @Test
+//    public void divide0Test() {
+//        CalcMain d = new CalcMain();
+//        double divideBy0 = d.divide(5, 0);
+//      assertEquals(, divideBy0, 0);
+//
+//    }
 
     @Test
     public void powerTest() {
