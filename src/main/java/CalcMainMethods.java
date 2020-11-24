@@ -1,19 +1,6 @@
 import java.util.Scanner;
 
-public class CalcMain {
-
-    public static Scanner scn = new Scanner(System.in);
-
-    public int[] setNumbers () {
-        System.out.println("podaj pierwszą liczbę");
-        int a = scn.nextInt();
-        System.out.println("podaj drugą liczbę");
-        int b = scn.nextInt();
-
-        int[] numbers;
-        numbers = new int[]{a,b};
-        return numbers;
-    }
+public class CalcMainMethods {
 
     public int add (int numb1, int numb2){ return numb1 + numb2; }
 

@@ -1,22 +1,18 @@
-
-import java.util.Scanner;
-
-
 public class CalcControl {
 
     // do komunikacji z użytkownikiem
     public int getInt (){
-        int number = CalcMain.scn.nextInt();
+        int number = CalcOtherMethods.scn.nextInt();
         return number;
     }
 
     // główna pętla - menu
 
     public void controlLoop() {
-        CalcMain calcMain = new CalcMain();
+        CalcMainMethods calcMainMethods = new CalcMainMethods();
             System.out.println("Podaj dwie liczby do obliczeń");
 
-            int numbers[] = calcMain.setNumbers();
+            int numbers[] = CalcOtherMethods.setNumbers();
             int a = numbers[0];
             int b = numbers[1];
 
@@ -26,32 +22,32 @@ public class CalcControl {
                 optionMenu = OptionMenu.createFromInt(getInt());
                 switch (optionMenu) {
                     case ADD:
-                        System.out.println(calcMain.add(a, b));
+                        System.out.println(calcMainMethods.add(a, b));
                         break;
                     case SUBTRACT:
-                        System.out.println(calcMain.subtract(a, b));
+                        System.out.println(calcMainMethods.subtract(a, b));
                         break;
                     case MULTIPLY:
-                        System.out.println(calcMain.multiply(a, b));
+                        System.out.println(calcMainMethods.multiply(a, b));
                         break;
                     case DIVIDE:
                         try {
-                            System.out.println(calcMain.divide(a, b));
+                            System.out.println(calcMainMethods.divide(a, b));
                         } catch (ArithmeticException e) {
                             System.err.println(e.getMessage());
                         }
                         break;
                     case POWER:
-                        System.out.println(calcMain.power(a, b));
+                        System.out.println(calcMainMethods.power(a, b));
                         break;
                     case ROOT:
-                        System.out.println(calcMain.root(a, b));
+                        System.out.println(calcMainMethods.root(a, b));
                         break;
                     case SETNEWNUMBRES:
                         System.out.println("podaj pierwszą nową liczbę");
-                        a = calcMain.scn.nextInt();
+                        a = CalcOtherMethods.scn.nextInt();
                         System.out.println("podaj drugą nową liczbę");
-                        b = calcMain.scn.nextInt();
+                        b = CalcOtherMethods.scn.nextInt();
                         break;
                     case EXIT:
                         exit();
@@ -74,7 +70,7 @@ public class CalcControl {
 
     private void exit() {
         System.out.println("Miłego dnia - do zobaczenia!!");
-        CalcMain.scn.close();
+        CalcOtherMethods.scn.close();
     }
 }
 
