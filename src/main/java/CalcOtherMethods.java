@@ -1,17 +1,55 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CalcOtherMethods {
 
     public static Scanner scn = new Scanner(System.in);
 
-    public static int[] setNumbers () {
-        System.out.println("podaj pierwszą liczbę");
-        int a = scn.nextInt();
-        System.out.println("podaj drugą liczbę");
-        int b = scn.nextInt();
-
-        int[] numbers;
-        numbers = new int[]{a,b};
-        return numbers;
+    public static double setNumber() {
+        double a = 0;
+        boolean aIsInt = false;
+        do {
+            try {
+                a = scn.nextDouble();
+                aIsInt = true;
+            } catch (InputMismatchException e) {
+                print("Wydaje się że nie podałeś liczby...");
+                scn.nextLine();
+            }
+        } while (!aIsInt);
+        return a;
     }
+
+    static OptionMenu getOption() {
+        boolean optionOk = false;
+        OptionMenu optionMenu = null;
+        while (!optionOk) {
+            try {
+                optionMenu = OptionMenu.createFromInt(getInt());
+                optionOk = true;
+            } catch (NoSuchOpctionException e) {
+                print(e.getMessage() + " podaj ponownie.");
+            } catch (InputMismatchException ignored) {
+                print("Wprowadzono wartość, która nie jest liczbą, podaj ponownie");
+            }
+        }
+        return optionMenu;
+    }
+
+
+    public static void print(String text) {
+        System.out.println(text);
+    }
+
+    // do komunikacji z użytkownikiem
+    public static int getInt(){
+        try {
+            return scn.nextInt();
+        } finally {
+            scn.nextLine();
+        }
+
+    }
+
+
 }

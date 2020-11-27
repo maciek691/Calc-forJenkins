@@ -10,26 +10,26 @@ public class MainTest {
     @Test
     public void addTest() {
         CalcMainMethods calcMainMethods = new CalcMainMethods();
-        int add = calcMainMethods.add(5, 5);
-        assertEquals(10, add);
+        double add = calcMainMethods.add(5, 5);
+        assertEquals(10, add,0);
     }
 
     @Test
     public void subtractTest() {
         CalcMainMethods s = new CalcMainMethods();
 
-        int subtract = s.subtract(10, 5);
+        double subtract = s.subtract(10, 5);
 
-        assertEquals(5, subtract);
+        assertEquals(5, subtract,0);
     }
 
     @Test
     public void multiplyTest() {
         CalcMainMethods m = new CalcMainMethods();
 
-        long multiply = m.multiply(5, 5);
+        double multiply = m.multiply(5, 5);
 
-        assertEquals(25, multiply);
+        assertEquals(25, multiply,0);
     }
 
     @Test

@@ -26,12 +26,17 @@ public enum OptionMenu {
         this.value = value;
         this.function = function;
     }
-    static OptionMenu createFromInt(int option) {
-        return OptionMenu.values()[option];
+    static OptionMenu createFromInt(int option) throws NoSuchOpctionException {
+            try {
+                return OptionMenu.values()[option];
+            } catch (ArrayIndexOutOfBoundsException e) {
+                throw new NoSuchOpctionException("Nie ma takiej opcji jak " + option);
+            }
     }
-
     @Override
     public String toString() {
         return value + " " + function;
     }
+
+
 }
