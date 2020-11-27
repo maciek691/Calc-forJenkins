@@ -5,21 +5,6 @@ public class CalcOtherMethods {
 
     public static Scanner scn = new Scanner(System.in);
 
-    public static double setNumber() {
-        double a = 0;
-        boolean aIsInt = false;
-        do {
-            try {
-                a = scn.nextDouble();
-                aIsInt = true;
-            } catch (InputMismatchException e) {
-                print("Wydaje się że nie podałeś liczby...");
-                scn.nextLine();
-            }
-        } while (!aIsInt);
-        return a;
-    }
-
     static OptionMenu getOption() {
         boolean optionOk = false;
         OptionMenu optionMenu = null;
@@ -36,12 +21,25 @@ public class CalcOtherMethods {
         return optionMenu;
     }
 
+    public static double setNumber() {
+        double a = 0;
+        boolean aIsInt = false;
+        do {
+            try {
+                a = scn.nextDouble();
+                aIsInt = true;
+            } catch (InputMismatchException e) {
+                print("Wydaje się że nie podałeś liczby...");
+                scn.nextLine();
+            }
+        } while (!aIsInt);
+        return a;
+    }
 
     public static void print(String text) {
         System.out.println(text);
     }
 
-    // do komunikacji z użytkownikiem
     public static int getInt(){
         try {
             return scn.nextInt();
