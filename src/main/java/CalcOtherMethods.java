@@ -29,7 +29,7 @@ public class CalcOtherMethods {
                 a = scn.nextDouble();
                 aIsInt = true;
             } catch (InputMismatchException e) {
-                print("Wydaje się że nie podałeś liczby...");
+                print("Wydaje się że nie podałeś liczby... spróbuj ponownie");
                 scn.nextLine();
             }
         } while (!aIsInt);

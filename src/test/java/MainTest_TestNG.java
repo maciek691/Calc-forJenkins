@@ -1,8 +1,8 @@
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class MainTest {
+public class MainTest_TestNG {
 
     @Test
     public void addTest() {
@@ -35,14 +35,6 @@ public class MainTest {
         double divide = d.divide(10, 4);
         assertEquals(2.5, divide, 0);
     }
-
-//    @Test
-//    public void divide0Test() {
-//        CalcMainMethods d = new CalcMainMethods();
-//        double divideBy0 = d.divide(5, 0);
-//      assertEquals(, divideBy0, 0);
-//
-//    }
 
     @Test
     public void powerTest() {
