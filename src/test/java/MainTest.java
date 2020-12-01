@@ -1,4 +1,3 @@
-/*
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -59,4 +58,3 @@ public class MainTest {
         assertEquals(2, root, 0);
     }
 }
-*/
