@@ -36,13 +36,11 @@ public class MainTest {
         assertEquals(2.5, divide, 0);
     }
 
-//    @Test
-//    public void divide0Test() {
-//        CalcMainMethods d = new CalcMainMethods();
-//        double divideBy0 = d.divide(5, 0);
-//      assertEquals(, divideBy0, 0);
-//
-//    }
+    @Test (expected = ArithmeticException.class)
+    public void divide0Test() {
+        CalcMainMethods d = new CalcMainMethods();
+        double divideBy0 = d.divide(5, 0);
+    }
 
     @Test
     public void powerTest() {
