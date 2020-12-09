@@ -1,6 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Calculator">
     <test name="Smoke">
+        <groups>
+            <run>
+                <include name="Smoke"> </include>
+            </run>
+        </groups>
         <classes>
             <class name="MainTest_TestNG"> </class>
         </classes>

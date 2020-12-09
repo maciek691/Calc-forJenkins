@@ -7,31 +7,31 @@ public class MainTest_TestNG {
 
     private CalcMainMethods calcUnderTest;
 
-    @BeforeTest
+    @BeforeTest  (groups = {"Smoke"})
     public void prepareCalc() {
         calcUnderTest = new CalcMainMethods();
     }
 
-    @Test
+    @Test (groups = {"Smoke"})
     public void addTest() {
         double add = calcUnderTest.add(5, 5);
         assertEquals(10, add, 0);
     }
 
-    @Test
+    @Test (groups = {"Smoke"})
     public void subtractTest() {
         double subtract = calcUnderTest.subtract(10, 5);
         assertEquals(5, subtract, 0);
     }
 
-    @Test
+    @Test (groups = {"Smoke"})
     public void multiplyTest() {
         double multiply = calcUnderTest.multiply(5, 5);
 
         assertEquals(25, multiply, 0);
     }
 
-    @Test
+    @Test (groups = {"Smoke"})
     public void divideTest() {
         double divide = calcUnderTest.divide(10, 4);
         assertEquals(2.5, divide, 0);
@@ -43,13 +43,13 @@ public class MainTest_TestNG {
         double divide = calcUnderTest.divide(2,0);
     }
 
-    @Test
+    @Test (groups = {"Smoke"})
     public void powerTest() {
         double power = calcUnderTest.power(3, 4);
         assertEquals(81, power, 0);
     }
 
-    @Test
+    @Test (groups = {"Smoke"})
     public void rootTest() {
         double root = calcUnderTest.root(16, 4);
         assertEquals(2, root, 0);
